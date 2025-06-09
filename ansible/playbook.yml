@@ -1,8 +1,8 @@
--name:Deploy to Tomcat
-hosts:web
-become:yes
+-name: Deploy to Tomcat
+hosts: web
+become: yes
 tasks:
-   -name:Copy WAR file to Tomcat
+   -name: Copy WAR file to Tomcat
    copy:
       src:"/var/snap/jenkins/4865/workspace/Ansible2-CICD/target/AnsibleWebApp2.war"
       dest:"/opt/tomcat/webapps/AnsibleWebApp2.war"
